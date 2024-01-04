@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Objects;
 
 public class CronExpressionParser {
+    private static final String SPACES_SEPARATOR = "  ";
     ExpressionParser expressionParser = new ExpressionParser();
     FieldParser fieldParser = new FieldParser();
 
@@ -29,7 +30,7 @@ public class CronExpressionParser {
             int numberOfSpaces = longestLabel-label.length();
             String formattedLabel = String.format("%-" + (label.length() + numberOfSpaces) + "s", label);
 
-            System.out.println(formattedLabel+"   "+fieldValue);
+            System.out.println(formattedLabel + SPACES_SEPARATOR + fieldValue);
         });
 
     }
