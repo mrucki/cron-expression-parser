@@ -1,4 +1,4 @@
-package com.mrucki.cron;
+package com.mrucki.cron.parser;
 
 import com.mrucki.cron.parser.CronField;
 import org.junit.jupiter.api.Test;
