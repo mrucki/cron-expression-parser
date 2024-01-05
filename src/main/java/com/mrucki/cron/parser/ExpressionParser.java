@@ -1,8 +1,8 @@
 package com.mrucki.cron.parser;
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Objects;
-import java.util.TreeMap;
 
 public class ExpressionParser {
 
@@ -16,7 +16,7 @@ public class ExpressionParser {
             throw new IllegalArgumentException("Cron expression should have "+CRON_FIELDS_LENGTH+" fields.");
         }
 
-        TreeMap<CronField, String> cronMap = new TreeMap<>();
+        Map<CronField, String> cronMap = new LinkedHashMap<>();
         cronMap.put(CronField.MINUTE, cronFields[0]);
         cronMap.put(CronField.HOUR, cronFields[1]);
         cronMap.put(CronField.DAY_OF_MONTH, cronFields[2]);
